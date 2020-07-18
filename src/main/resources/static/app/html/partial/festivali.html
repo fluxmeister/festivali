@@ -3,23 +3,23 @@
         <form>
             <div class="form-group">
                 <label for="nazivNF">Name</label>
-                <input type="text" class="form-control" name="nazivNF" ng-model="noviFestival.naziv" placeholder="Naziv">
+                <input type="text" class="form-control" name="nazivNF" ng-model="noviFestival.naziv" placeholder="Name">
             </div>
             <div class="form-group">
                 <label for="organizatorNF">Organizer</label>
-                <input type="text" class="form-control" name="organizatorNF" ng-model="noviFestival.organizator" placeholder="Organizator">
+                <input type="text" class="form-control" name="organizatorNF" ng-model="noviFestival.organizator" placeholder="Organizer">
             </div>
             <div class="form-group">
                 <label for="datumPocetkaNF">Date of beginning</label>
-                <input type="text" class="form-control" name="datumPocetkaNF" ng-model="noviFestival.datumPocetka" placeholder="Datum poÄ�etka">
+                <input type="text" class="form-control" name="datumPocetkaNF" ng-model="noviFestival.datumPocetka" placeholder="Date of beginning">
             </div>
             <div class="form-group">
                 <label for="cenaKarteNF">Ticket price</label>
-                <input type="text" class="form-control" name="cenaKarteNF" ng-model="noviFestival.cenaKarte" placeholder="Cena karte">
+                <input type="text" class="form-control" name="cenaKarteNF" ng-model="noviFestival.cenaKarte" placeholder="Ticket price">
             </div>
             <div class="form-group">
-                <label for="cenaKarteNF">Amount of cards</label>
-                <input type="text" class="form-control" name="kolicinaNF" ng-model="noviFestival.kolicina" placeholder="KoliÄ�ina">
+                <label for="cenaKarteNF">Amount of tickets</label>
+                <input type="text" class="form-control" name="kolicinaNF" ng-model="noviFestival.kolicina" placeholder="Amount of tickets">
             </div>
             <div class="form-group">
                 <label for="mestoNF">Place</label>
@@ -29,7 +29,7 @@
                 </select>
             </div>
 
-            <button type="button" class="btn btn-primary" ng-click="dodaj()">Dodaj</button>
+            <button type="button" class="btn btn-primary" ng-click="dodaj()">Add</button>
         </form>
 
     <br/>
@@ -38,11 +38,11 @@
         <form>
             <div class="form-group">
                 <label for="nazivTF">Name</label>
-                <input type="text" class="form-control" name="nazivTF" ng-model="trazeniFestival.naziv" placeholder="Naziv">
+                <input type="text" class="form-control" name="nazivTF" ng-model="trazeniFestival.naziv" placeholder="Name">
             </div>
              <div class="form-group">
                 <label for="mckTF">Maximal ticket price</label>
-                <input type="text" class="form-control" name="mckTF" ng-model="trazeniFestival.maxCena" placeholder="Maksimalna cena karte">
+                <input type="text" class="form-control" name="mckTF" ng-model="trazeniFestival.maxCena" placeholder="Maximal ticket price">
             </div>
             <div class="form-group">
                 <label for="mestoNF">Place</label>
@@ -53,7 +53,7 @@
             </div>
            
 
-            <button type="button" class="btn btn-primary" ng-click="trazi()">Filtriraj</button>
+            <button type="button" class="btn btn-primary" ng-click="trazi()">Filter</button>
         </form>
 
 
@@ -61,8 +61,8 @@
     <br/>
     <br/>
     <div class="btn-group pull-right">
-        <button class="btn btn-primary" ng-click="nazad()" ng-disabled="pageNum==0">Prethodna</button>
-        <button class="btn btn-primary" ng-click="napred()" ng-disabled="pageNum == totalPages - 1">SledeÄ‡a</button>
+        <button class="btn btn-primary" ng-click="nazad()" ng-disabled="pageNum==0">Previous</button>
+        <button class="btn btn-primary" ng-click="napred()" ng-disabled="pageNum == totalPages - 1">Next</button>
     </div>
     <table class="table table-striped">
         <tr>
@@ -81,9 +81,9 @@
             <td>{{festival.kolicina}}</td>
             <td>{{festival.datumPocetka}}</td>
             <td>
-                <button class="btn btn-danger" ng-click="obrisi(festival.id)">ObriÅ¡i</button>
-                <button class="btn btn-warning" ng-click="izmeni(festival.id)">Izmeni</button>
-            	<button class="btn btn-primary" ng-click="kupi(festival.id)">Kupi</button>
+                <button class="btn btn-danger" ng-click="obrisi(festival.id)">Delete</button>
+                <button class="btn btn-warning" ng-click="izmeni(festival.id)">Edit</button>
+            	<button class="btn btn-primary" ng-click="kupi(festival.id)">Purchase</button>
             </td>
         </tr>
     </table>
