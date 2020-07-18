@@ -132,7 +132,7 @@ festivalApp.controller("festivaliCtrl", function($scope, $http, $location){
                 getFestivali();
             },
             function error(data){
-                alert("Neuspešno brisanje!");
+                alert("Unsuccessful erase!");
                 console.log(data);
             }
         );
