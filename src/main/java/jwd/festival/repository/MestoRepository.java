@@ -9,4 +9,8 @@ import jwd.festival.model.Mesto;
 public interface MestoRepository 
 	extends JpaRepository<Mesto, Long> {
 
+	Mesto findOne(Long id);
+
+	void delete(Long id);
+
 }
