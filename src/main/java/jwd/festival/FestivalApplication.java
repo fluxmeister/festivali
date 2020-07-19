@@ -9,10 +9,10 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 public class FestivalApplication 
 	extends SpringBootServletInitializer {
 	
-//	@SuppressWarnings("unused")
+	@SuppressWarnings("unused")
 	@Autowired 
 //	private TestData td;
-	
+
 	public static void main(String[] args) {
 		 SpringApplication.run(FestivalApplication.class, args);
 	}

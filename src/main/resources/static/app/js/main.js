@@ -61,7 +61,7 @@ festivalApp.controller("festivaliCtrl", function($scope, $http, $location){
             		$scope.totalPages = res.headers('totalPages');
             	},
             	function error(res){
-            		alert("Unsuccesful getting festivals!");
+            		alert("Neuspešno dobavljanje festivala!");
             	}
             );
     };
@@ -74,7 +74,7 @@ festivalApp.controller("festivaliCtrl", function($scope, $http, $location){
             		$scope.mesta = res.data;
             	},
             	function error(){
-            		alert("Unsuccesful getting places!");
+            		alert("Neuspešno dobavljanje mesta!");
             	}
             );
 
@@ -101,7 +101,7 @@ festivalApp.controller("festivaliCtrl", function($scope, $http, $location){
         $http.post(baseUrlFestivali, $scope.noviFestival)
             .then(
             	function success(res){
-	                alert("Successfully added festival into database.");
+	                alert("Uspešno dodat festival u bazu.");
 	                getFestivali();
 	
 	                $scope.noviFestival.naziv = "";
@@ -112,7 +112,7 @@ festivalApp.controller("festivaliCtrl", function($scope, $http, $location){
 	                $scope.noviFestival.mestoId = "";
             	},
             	function error(res){
-            		alert("Unsuccessful to add a festival into a database!");
+            		alert("Neuspešno dodavanje festivala!");
             	}
             );
     };
@@ -132,7 +132,7 @@ festivalApp.controller("festivaliCtrl", function($scope, $http, $location){
                 getFestivali();
             },
             function error(data){
-                alert("Unsuccessful erase!");
+                alert("Neuspešno brisanje!");
                 console.log(data);
             }
         );
@@ -143,11 +143,11 @@ festivalApp.controller("festivaliCtrl", function($scope, $http, $location){
     	$http.post(baseUrlFestivali + "/" + id)
         .then(
         	function success(res){
-                alert("Successfully bought.");
+                alert("Uspešna kupovina.");
                 getFestivali();
         	},
         	function error(res){
-        		alert("Unsuccessfully bought!");
+        		alert("Neuspešna kupovina!");
         	}
         );
     	
@@ -173,7 +173,7 @@ festivalApp.controller("editFestivalCtrl", function($scope, $http, $routeParams,
             		$scope.stariFestival = data.data;
             	},
             	function errror(){
-            		alert("Unsuccessful to reach for festivals!")
+            		alert("Neuspešno dobavljanje festivala!")
             	}
             );
 
@@ -184,11 +184,11 @@ festivalApp.controller("editFestivalCtrl", function($scope, $http, $routeParams,
         $http.put(baseUrlFestivali + "/" + $scope.stariFestival.id, $scope.stariFestival)
             .then(
             	function success(){
-            		alert("Successfully edited festival!");
+            		alert("Uspešno izmenjen festival!");
             		$location.path("/");
             	},
             	function error(){
-            		alert("Unsuccessfuly edited festival!")
+            		alert("Neuspešno izmenjen festival!")
             	}
             );
     }

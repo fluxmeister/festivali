@@ -26,8 +26,4 @@ public interface FestivalRepository
 			@Param("idMesta") Long idMesta,
 			Pageable pageRequest);
 
-	void delete(Long id);
-
-	Festival findOne(Long id);
-
 }
